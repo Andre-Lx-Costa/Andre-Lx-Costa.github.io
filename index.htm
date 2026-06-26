@@ -1,306 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>André Costa · Product Owner</title>
+    <link rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23e8572a'/><text y='72' x='50' text-anchor='middle' font-size='58' font-family='Arial' font-weight='900' fill='white'>AC</text></svg>">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Open Sans',sans-serif;color:#1a1a2e;background:#fff;font-size:13px}
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Open Sans',sans-serif;color:#1a1a2e;background:#fff}
-  nav{background:#fff;padding:14px 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f0f0f0;position:sticky;top:0;z-index:100}
-  .nav-logo{font-family:'Raleway',sans-serif;font-weight:800;font-size:20px;color:#e8572a}
-  .nav-logo span{color:#1a1a2e}
-  .nav-links{display:flex;gap:28px}
-  .nav-links a{text-decoration:none;font-size:12px;font-weight:600;color:#888;letter-spacing:1px;text-transform:uppercase}
-  .nav-links a.active{color:#e8572a;border-bottom:2px solid #e8572a;padding-bottom:2px}
-  .hero{background:#f0f2f7;padding:60px 48px 0;display:flex;align-items:flex-end;gap:48px;min-height:340px}
-  .hero-text{flex:1;padding-bottom:48px}
-  .hero-name{font-family:'Raleway',sans-serif;font-size:42px;font-weight:800;line-height:1.1;margin-bottom:8px}
-  .hero-name span{color:#e8572a}
-  .hero-role{font-size:13px;font-weight:600;color:#e8572a;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-  .hero-socials{display:flex;gap:10px;margin-bottom:24px}
-  .hero-socials a{width:32px;height:32px;border:1px solid #ccc;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#555;text-decoration:none;font-size:13px;transition:all .2s}
-  .hero-socials a:hover{border-color:#e8572a;color:#e8572a}
-  .btn{display:inline-block;background:#e8572a;color:#fff;padding:10px 24px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-radius:2px}
-  .hero-img{width:100%;max-width:280px;flex-shrink:0;display:flex;align-items:flex-end;justify-content:center}
-  .hero-img img{width:100%;height:auto;display:block}
-  .hero-avatar{width:220px;height:240px;background:linear-gradient(135deg,#dde3f0 0%,#c8d0e4 100%);border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
-  .avatar-initials{font-family:'Raleway',sans-serif;font-size:64px;font-weight:800;color:#e8572a;opacity:.25}
-  .avatar-label{position:absolute;bottom:16px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;color:#1a1a2e;letter-spacing:2px;text-transform:uppercase}
-  section{padding:64px 48px}
-  .section-label{display:flex;flex-direction:column;align-items:center;margin-bottom:40px;text-align:center}
-  .section-label .bar{width:40px;height:3px;background:#e8572a;margin-bottom:12px}
-  .section-label h2{font-family:'Raleway',sans-serif;font-size:26px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1a1a2e}
-  .about{background:#fff}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:36px}
-  .about-tagline{font-family:'Raleway',sans-serif;font-size:20px;font-weight:900;line-height:1.6;color:#1a1a2e}
-  .about-body{font-size:13.5px;line-height:1.8;color:#555}
-  .contact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:1px solid #eee;padding-top:28px}
-  .contact-item{display:flex;align-items:center;gap:10px;font-size:12.5px;color:#444}
-  .contact-icon{width:34px;height:34px;border-radius:50%;background:#fff5f2;border:1px solid #e8572a;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#e8572a;font-size:14px}
-  .container {
+/* NAV */
+nav{background:#fff;padding:14px 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f0f0f0;position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Raleway',sans-serif;font-weight:800;font-size:20px;color:#e8572a}
+.nav-logo span{color:#1a1a2e}
+.nav-links{display:flex;gap:6px}
+.nav-links a{
+  text-decoration:none;
+  font-size:11px;font-weight:600;color:#888;
+  letter-spacing:1px;text-transform:uppercase;
+  padding:5px 12px;border-radius:3px;
+  transition:all .2s;
+}
+.nav-links a:hover{color:#e8572a;background:#fff5f2}
+.nav-links a.active{
+  color:#fff;
+  background:#e8572a;
+}
+
+.hero{background:#f2f5fc;padding:56px 48px 0;display:flex;align-items:flex-end;gap:48px}
+.hero-text{flex:1;padding-bottom:48px}
+.hero-name{font-family:'Raleway',sans-serif;font-size:40px;font-weight:800;line-height:1.1;margin-bottom:6px}
+.hero-name span{color:#e8572a}
+.hero-role{font-size:12px;font-weight:600;color:#e8572a;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.hero-socials{display:flex;gap:10px;margin-bottom:22px}
+.hero-socials a{width:30px;height:30px;border:1px solid #ccc;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#555;text-decoration:none;font-size:12px}
+.btn{display:inline-block;background:#e8572a;color:#fff;padding:9px 22px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-radius:2px}
+.hero-img{width:200px;flex-shrink:0}
+.hero-img img{width:100%;height:auto;display:block}
+@media (max-width:900px) {
+  .hero{flex-direction:column;align-items:center;text-align:center}
+  .hero-text{padding-bottom:24px}
+  .hero-img{width:100%;max-width:320px}
+}
+.hero-avatar{width:180px;height:200px;background:linear-gradient(160deg,#dde3f0,#c8d0e4);border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;position:relative}
+.avatar-initials{font-family:'Raleway',sans-serif;font-size:56px;font-weight:800;color:#e8572a;opacity:.2}
+.avatar-label{position:absolute;bottom:12px;font-size:9px;font-weight:700;color:#1a1a2e;letter-spacing:2px;text-transform:uppercase}
+section{padding:52px 48px}
+.section-label{display:flex;flex-direction:column;align-items:center;margin-bottom:32px}
+.section-label .bar{width:34px;height:3px;background:#e8572a;margin-bottom:10px}
+.section-label h2{font-family:'Raleway',sans-serif;font-size:22px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+/* GENERAL */
+.container {
     width: min(1200px, calc(100% - 64px));
     margin: 0 auto;}
-  .profile{background:#f7f8fc}
-  .profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-  .profile-col h3{font-family:'Raleway',sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1a1a2e;margin-bottom:20px;display:flex;align-items:center;gap:10px}
-  .profile-col h3::before{content:'';width:4px;height:16px;background:#e8572a;border-radius:2px;display:inline-block}
-  .exp-item{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #eaeaea}
-  .exp-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-  .exp-title{font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;color:#1a1a2e;margin-bottom:2px}
-  .exp-company{font-size:12px;font-style:italic;color:#888;margin-bottom:3px}
-  .exp-period{font-size:12px;font-weight:600;color:#1a1a2e;margin-bottom:8px}
-  .exp-bullets{list-style:none;padding:0}
-  .exp-bullets li{font-size:12.5px;color:#555;line-height:1.7;padding-left:14px;position:relative;margin-bottom:3px}
-  .exp-bullets li::before{content:'';width:7px;height:7px;border-radius:50%;background:#e8572a;position:absolute;left:0;top:6px}
-  .edu-item{margin-bottom:18px}
-  .edu-degree{font-family:'Raleway',sans-serif;font-size:13.5px;font-weight:700;color:#1a1a2e;margin-bottom:2px}
-  .edu-school{font-size:12px;font-style:italic;color:#e8572a;margin-bottom:2px}
-  .edu-year{font-size:12px;font-weight:600;color:#555;margin-bottom:2px}
-  .edu-detail{font-size:11.5px;color:#888;line-height:1.6}
-  .skills-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-  .tag{background:#e8572a;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:5px 12px;border-radius:2px}
-  .tag.outline{background:transparent;color:#e8572a;border:1px solid #e8572a}
-  .lang-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#444;margin-bottom:8px}
-  .lang-dot{width:8px;height:8px;border-radius:50%;background:#e8572a;flex-shrink:0}
-  .cert-item{display:flex;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #eaeaea}
-  .cert-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-  .cert-dot{width:8px;height:8px;border-radius:50%;background:#e8572a;margin-top:5px;flex-shrink:0}
-  .cert-name{font-size:12.5px;font-weight:600;color:#1a1a2e;margin-bottom:1px}
-  .cert-meta{font-size:11px;color:#888}
-  .vol-item{display:flex;gap:10px;margin-bottom:10px}
-  .vol-dot{width:7px;height:7px;border-radius:50%;background:#e8572a;margin-top:5px;flex-shrink:0}
-  .vol-name{font-size:12.5px;font-weight:600;color:#1a1a2e;margin-bottom:1px}
-  .vol-meta{font-size:11px;color:#888}
-  footer{background:#1a1a2e;color:#aaa;text-align:center;padding:24px;font-size:12px}
-  footer span{color:#e8572a}
+
+/* ABOUT */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-bottom:28px}
+.about-tagline{font-family:'Raleway',sans-serif;font-size:18px;font-weight:700;line-height:1.6;color:#1a1a2e}
+.about-body{font-size:12.5px;line-height:1.85;color:#555}
+.contact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:1px solid #eee;padding-top:22px}
+.contact-item{display:flex;align-items:center;gap:10px}
+.contact-icon{width:30px;height:30px;border-radius:50%;background:#fff5f2;border:1px solid #e8572a;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#e8572a;font-size:13px}
+
+/* VALUE PROP */
+.value-prop{background:#f7f8fc}
+.vp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.vp-card{background:#fff;border:1px solid #eee;border-left:4px solid #e8572a;border-radius:0 4px 4px 0;padding:18px 20px}
+.vp-card h4{font-family:'Raleway',sans-serif;font-size:12px;font-weight:800;color:#e8572a;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.vp-card p{font-size:12px;color:#555;line-height:1.7}
+
+/* METRICS */
+.metrics{background:#1a1a2e}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#2a2a3e}
+.metric-item{background:#1a1a2e;padding:28px 20px;text-align:center}
+.metric-val{font-family:'Raleway',sans-serif;font-size:36px;font-weight:800;color:#e8572a;line-height:1}
+.metric-label{font-size:11px;color:#aaa;margin-top:6px;letter-spacing:.5px}
+
+/* EXPERIENCE */
+.experience{background:#fff}
+.exp-block{margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #f0f0f0}
+.exp-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.exp-company-header{font-family:'Raleway',sans-serif;font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:4px}
+.exp-role-line{display:flex;gap:16px;margin-bottom:14px;align-items:baseline;flex-wrap:wrap}
+.exp-title{font-size:12.5px;font-weight:600;color:#555}
+.exp-period{font-size:11px;color:#e8572a;font-style:italic}
+.exp-cols{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.col-header{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#bbb;padding-bottom:8px;border-bottom:1px solid #eee;margin-bottom:10px}
+.bullet-row{display:contents}
+.bullet-left{font-size:15px;color:#1a1a2e;line-height:1.6;padding:8px 20px 8px 0;border-bottom:1px solid #f5f5f5;display:flex;gap:8px;align-items:flex-start}
+.bullet-left::before{content:'';width:6px;height:6px;border-radius:50%;background:#e8572a;flex-shrink:0;margin-top:6px}
+.bullet-right{font-size:14px;color:#555;line-height:1.6;padding:8px 0 8px 16px;border-bottom:1px solid #f5f5f5;border-left:2px solid #ffd5c8;background:#fffaf9}
+.bullet-right strong{display:block;font-size:10.5px;font-weight:700;color:#e8572a;letter-spacing:.5px;text-transform:uppercase;margin-bottom:2px}
+
+/* SKILLS */
+.skills-section{background:#f7f8fc}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.skill-cat{background:#fff;border:1px solid #eee;border-radius:4px;padding:20px}
+.skill-cat h4{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;color:#e8572a;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #f0f0f0}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.stag{background:#e8572a;color:#fff;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:4px 10px;border-radius:2px}
+.stag.o{background:transparent;color:#e8572a;border:1px solid #e8572a}
+
+/* CERTS */
+
+/* CERTIFICATIONS */
+.certs-section{background:#fff}
+.certs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cert-card{border:1px solid #eee;border-radius:6px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;transition:box-shadow .2s}
+.cert-card:hover{box-shadow:0 4px 16px rgba(232,87,42,.08)}
+.cert-card.in-progress{border-color:#e8572a;border-style:dashed;background:#fffaf9}
+.cert-icon-wrap{width:42px;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.cert-icon-wrap.scrum   {background:#fff3ee}
+.cert-icon-wrap.security{background:#eef3ff}
+.cert-icon-wrap.safe    {background:#edfbf3}
+.cert-icon-wrap.ibm     {background:#fff8ee}
+.cert-name{font-size:12px;font-weight:600;color:#1a1a2e;margin-bottom:4px}
+.cert-meta{font-size:11px;color:#888}
+.cert-badge{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-top:6px}
+.cert-badge.done{background:#edfbf3;color:#1a9e5c}
+.cert-badge.progress{background:#fff3ee;color:#e8572a;border:1px solid #e8572a}
+
+footer{background:#1a1a2e;color:#aaa;text-align:center;padding:18px;font-size:11px}
+footer span{color:#e8572a}
 </style>
 
-<nav>
-  <div class="nav-logo">My PO Journey<span>.</span></div>
-  <div class="nav-links">
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#myproductownerjourney">My Product Owner Impact</a>
-  </div>
-</nav>
+    <h2 class="sr-only"
+      style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">André
+      Costa — Product Owner Portfolio</h2>
 
-<div class="container">
-<div class="hero" id="home">
-  <div class="hero-text">
-    <div class="hero-name"><span>ANDRÉ</span> COSTA</div>
-    <div class="hero-role">Product Owner</div>
-    <div class="hero-socials">
-      <a href="https://linkedin.com/in/andrelxcosta" title="LinkedIn"><strong>in</strong></a>
-      <a href="mailto:ancosta@gmail.com" title="Email"><strong>@</strong></a>
-      <a href="tel:+4571598592" title="Phone"><strong>☏</strong></a>
-    </div>
-    <a href="https://drive.google.com/file/d/1ohP_gllR9F0NBRVmCCAQagiDHZ5VSENz/view?usp=drive_link" class="btn">Download CV</a>
-  </div>
-  <div class="hero-img" style="padding-bottom:24px;">
-      <img src="myuglyfacee.png" alt="André Costa">
-  </div>
-  </div>
-</div>
-<div class="container">
-<section class="about" id="about">
-  <div class="section-label">
-    <div class="bar"></div>
-    <h2>About Me</h2>
-  </div>
-  <div class="about-grid">
-    <div class="about-tagline">
-      Product Owner with a background in software engineering, bringing a deep understanding of both product direction and technical execution.
-    </div>
-    <div class="about-body">
-      I bring a rare combination of hands on engineering experience and a people first mindset, grounded in a deep understanding of what teams build, how they build it, and what tends to slow them down. This perspective helps me translate ideas into clear requirements, make faster and better informed trade off decisions, and keep engineers and stakeholders aligned around outcomes that matter.
-
-Passionate, collaborative, and naturally curious, I focus on creating clarity, momentum, and team environments where delivery feels smooth and intentional rather than forced.
- </div>
-  </div>
-  </div>
-</section>
-
-<div class="container">
-<section class="profile" id="myproductownerjourney">
-  <div class="section-label">
-    <div class="bar"></div>
-    <h2>Product Owner Impact</h2>
-  </div>
-  <div class="profile-grid">
-
-    <div class="profile-col">
-      <h3>Work Experience</h3>
-
-      <div class="exp-item">
-        <div class="exp-title">De-facto Product Owner — DevOps Engineer</div>
-        <div class="exp-company">European Spallation Source (ESS)</div>
-        <div class="exp-period">Nov 2024 – Present</div>
-        <ul class="exp-bullets">
-          <li>Owned CI/CD, infrastructure & Kafka data-streaming roadmaps</li>
-          <li>Defined high-availability SLA & disaster recovery strategy</li>
-          <li>Championed Observability adoption (Grafana, Graylog) — reduced incident MTTR</li>
-          <li>Translated scientific research requirements into scalable solutions</li>
-        </ul>
+    <nav>
+      <div class="nav-logo">My PO Journey<span>.</span></div>
+      <div class="nav-links">
+        <a href="#home" class="active" data-section="home">Home</a>
+        <a href="#about" data-section="about">About me</a>
+        <a href="#experience" data-section="experience">Experience</a>
+        <a href="#skills" data-section="skills">Skills</a>
       </div>
+    </nav>
 
-      <div class="exp-item">
-        <div class="exp-title">PO Data & AI Platform — Senior Platform Engineer</div>
-        <div class="exp-company">ECCO SKO</div>
-        <div class="exp-period">Jun – Oct 2024</div>
-        <ul class="exp-bullets">
-          <li>Owned cloud-agnostic Data & AI platform lifecycle (AWS, Azure, K8s)</li>
-          <li>Delivered Platform SDK standardising enterprise data integration</li>
-          <li>Provisioned Kubernetes environments for Data Science teams</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-title">Cyber Security PO & Cloud Platform Engineer</div>
-        <div class="exp-company">Motorola Solutions</div>
-        <div class="exp-period">Jun 2021 – May 2024</div>
-        <ul class="exp-bullets">
-          <li>Owned cybersecurity roadmap: STIGs, SAST/DAST/SCA tooling</li>
-          <li>Built high-availability microservices platform (FIPS compliant)</li>
-          <li>Led incident response & software supply chain security</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-title">SDK Backend Product Owner</div>
-        <div class="exp-company">Jabra</div>
-        <div class="exp-period">Oct 2019 – May 2021</div>
-        <ul class="exp-bullets">
-          <li>Formally owned SDK backend roadmap within SAFe framework</li>
-          <li>Delivered cross-platform language bindings (ObjC, Java)</li>
-          <li>Led PI planning & sprint ceremonies</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-title">Cryptanalysis Module Product Owner</div>
-        <div class="exp-company">SciEngines ApS</div>
-        <div class="exp-period">Mar 2018 – Oct 2019</div>
-        <ul class="exp-bullets">
-          <li>Owned roadmaps for FPGA cryptanalysis modules</li>
-          <li>Defined decryption specs for high-performance client standards</li>
-          <li>Full customer ownership from requirements to post-delivery support</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-title">IT Consultant</div>
-        <div class="exp-company">Deloitte</div>
-        <div class="exp-period">Sep 2014 – Dec 2016</div>
-        <ul class="exp-bullets">
-          <li>Requirements engineering for Codan Forsikring Core Insurance system</li>
-          <li>Test team management and cross-functional execution</li>
-          <li>Large-scale insurance system migration (MPLS, TIA V6/V7)</li>
-        </ul>
-      </div>
-
-      <div style="margin-top:28px">
-        <h3>Skills</h3>
-        <div style="margin-bottom:8px;font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;margin-top:12px">Product & Agile</div>
-        <div class="skills-tags">
-          <span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Scrum</span><span class="tag">SAFe</span><span class="tag">Roadmapping</span>
+    <!-- HERO -->
+    <div class="container">
+      <div class="hero" id="home">
+        <div class="hero-text">
+          <div class="hero-name"><span>ANDRÉ</span> COSTA</div>
+          <div class="hero-role">Product Owner</div>
+          <div class="hero-socials">
+            <a href="https://linkedin.com/in/andrelxcosta"
+              title="LinkedIn"><strong>in</strong></a>
+            <a href="mailto:ancosta@gmail.com"
+              title="Email"><strong>@</strong></a>
+            <a href="tel:+4571598592" title="Phone"><strong>☏</strong></a>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/17mGP5oulNreaShD0dnSs2DtwJw1Qf1km/view?usp=drive_link"
+            class="btn">Check my CV</a>
         </div>
-        <div style="margin-bottom:8px;font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;margin-top:14px">Cloud & Infra</div>
-        <div class="skills-tags">
-          <span class="tag outline">AWS</span><span class="tag outline">Azure</span><span class="tag outline">Kubernetes</span><span class="tag outline">Docker</span><span class="tag outline">Terraform</span>
-        </div>
-        <div style="margin-bottom:8px;font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;margin-top:14px">Engineering</div>
-        <div class="skills-tags">
-          <span class="tag outline">Python</span><span class="tag outline">C/C++</span><span class="tag outline">Rust</span><span class="tag outline">Elixir</span><span class="tag outline">Go</span><span class="tag outline">Kafka</span>
-        </div>
-        <div style="margin-bottom:8px;font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;margin-top:14px">Security</div>
-        <div class="skills-tags">
-          <span class="tag">STIGs</span><span class="tag">SAST/DAST</span><span class="tag">MEND</span><span class="tag">Twistlock</span>
+        <div class="hero-img" style="padding-bottom:24px;">
+          <img src="myuglyface.png" alt="André Costa">
         </div>
       </div>
     </div>
 
-    <div class="profile-col">
-      <h3>Education</h3>
+    <!-- ABOUT -->
+    <div class="container">
+      <section class="about" id="about">
+        <div class="section-label"><div class="bar"></div><h2>About
+            Me</h2></div>
+        <div class="about-grid">
+          <div class="about-tagline">
+            Product Owner with a background in software engineering, bringing a
+            deep
+            understanding of both <span
+              style="background:#e8572a;color:#fff;padding:0 4px;border-radius:2px;">product
+              direction</span> and <span
+              style="background:#e8572a;color:#fff;padding:0 4px;border-radius:2px;">technical
+              execution</span>.
+          </div>
+          <div class="about-body">
+            I bring a rare combination of hands on engineering experience and a
+            people first mindset, grounded in a deep understanding of what teams
+            build, how they build it, and what tends to slow them down. This
+            perspective helps me translate ideas into clear requirements, make
+            faster and better informed trade off decisions, and keep engineers
+            and
+            stakeholders aligned around outcomes that matter.
 
-      <div class="edu-item">
-        <div class="edu-degree">MSc. Electrical & Computer Engineering</div>
-        <div class="edu-school">Instituto Superior Técnico, Lisbon</div>
-        <div class="edu-year">2007 – 2017</div>
-        <div class="edu-detail">Telecommunications & Computer Engineering. IST ranks top 151–200 worldwide (ARWU).</div>
-      </div>
-
-      <div class="edu-item">
-        <div class="edu-degree">Research Internship — SooMPI Thesis</div>
-        <div class="edu-school">INESC-ID, Lisbon</div>
-        <div class="edu-year">Jan 2014 – Sep 2017</div>
-        <div class="edu-detail">R&D on "SooMPI – Sockets Over MPI": enabling C socket programs to run over MPI, opening HPC environments to distributed systems research.</div>
-      </div>
-
-      <h3 style="margin-top:28px">Certifications</h3>
-
-      <div class="cert-item">
-        <div class="cert-dot"></div>
-        <div>
-          <div class="cert-name">The Product Owner Profession: Unleashing the Power of Scrum</div>
-          <div class="cert-meta">SkillUp  ·  Jun 2026  ·  ID: F31HNC95XVMG</div>
-        </div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-dot"></div>
-        <div>
-          <div class="cert-name">CompTIA Security+ ce</div>
-          <div class="cert-meta">CompTIA  ·  May 2023 – May 2026</div>
-        </div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-dot"></div>
-        <div>
-          <div class="cert-name">Certified SAFe® 4 Practitioner</div>
-          <div class="cert-meta">Scaled Agile, Inc.  ·  Jan 2020</div>
-        </div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-dot"></div>
-        <div>
-          <div class="cert-name">CLA – C Programming Language Certified Associate</div>
-          <div class="cert-meta">C++ Institute  ·  Apr 2019</div>
-        </div>
-      </div>
-
-      <h3 style="margin-top:28px">Languages</h3>
-      <div class="lang-item"><div class="lang-dot"></div>Portuguese — Native</div>
-      <div class="lang-item"><div class="lang-dot"></div>English — Proficient</div>
-      <div class="lang-item"><div class="lang-dot"></div>Danish — Learning</div>
-
-      <h3 style="margin-top:28px">Volunteer & Community</h3>
-      <div class="vol-item">
-        <div class="vol-dot"></div>
-        <div>
-          <div class="vol-name">Ajude — Association Board, Treasurer</div>
-          <div class="vol-meta">2012 – 2016  ·  Youth & senior community support</div>
-        </div>
-      </div>
-      <div class="vol-item">
-        <div class="vol-dot"></div>
-        <div>
-          <div class="vol-name">Inovterra — Association Board, Treasurer</div>
-          <div class="vol-meta">2012 – 2015  ·  Local agricultural development</div>
-        </div>
-      </div>
-      <div class="vol-item">
-        <div class="vol-dot"></div>
-        <div>
-          <div class="vol-name">Banco Alimentar / MotelX</div>
-          <div class="vol-meta">2007 & 2010  ·  Food bank & film festival volunteer</div>
-        </div>
-      </div>
-
-      <h3 style="margin-top:28px">Working Style</h3>
-      <p style="font-size:12.5px;color:#555;line-height:1.8;font-style:italic;border-left:3px solid #e8572a;padding-left:12px;margin-top:8px">
-        "I believe the best products come from energized, trusted teams. Bringing curiosity, creative thinking, and a bias for over-delivering, I equally prioritize the strategic roadmap and the people executing it."
-      </p>
+            Passionate, collaborative, and naturally curious, I focus on
+            creating
+            clarity, momentum, and team environments where delivery feels smooth
+            and
+            intentional rather than forced.
+          </div> </div>
+      </section>
     </div>
-  </div>
-  </div>
-</section>
+    <!-- WHY ME -->
+    <div class="container">
+      <section class="value-prop">
+        <div class="section-label"><div
+            class="bar"></div><h2>STRENGTHS</h2></div>
+        <div class="vp-grid">
+          <div class="vp-card">
+            <h4><i class="ti ti-code" aria-hidden="true"
+                style="margin-right:6px"></i>Technical Depth</h4>
+            <p>8+ years as a hands-on engineer across cloud, DevOps,
+              cybersecurity &
+              embedded systems. I read the code, challenge the estimate, and
+              co-design the solution. No translation layer is needed between me
+              and
+              the team.</p>
+          </div>
+          <div class="vp-card">
+            <h4><i class="ti ti-users" aria-hidden="true"
+                style="margin-right:6px"></i>Stakeholder Fluency</h4>
+            <p>From scientific researchers to US
+              federal compliance officers to enterprise data scientists, I
+              translate
+              complex domain needs into clear, prioritised backlogs that
+              engineering
+              teams can actually execute.</p>
+          </div>
+          <div class="vp-card">
+            <h4><i class="ti ti-shield-check" aria-hidden="true"
+                style="margin-right:6px"></i>Security Driven Mindset</h4>
+            <p>CompTIA Security+ certified. Formally owned a cybersecurity
+              product
+              portfolio at Motorola Solutions, I build compliance and security
+              into
+              the roadmap from day one, not as an afterthought.</p>
+          </div>
+          <div class="vp-card">
+            <h4><i class="ti ti-rocket" aria-hidden="true"
+                style="margin-right:6px"></i>Delivery Bias</h4>
+            <p>Certified SAFe 4 Practitioner. Experienced in PI planning, sprint
+              ceremonies, and protecting engineering focus. I over-deliver, not
+              by
+              working harder, but by making sure the team is always working on
+              the
+              right thing.</p>
+          </div>
+        </div>
+      </section>
+    </div>
 
-<footer>
-  <p>André Costa · Product Owner · <span>ancosta@gmail.com</span> · linkedin.com/in/andrelxcosta</p>
-</footer>
+    <!-- METRICS -->
+    <div class="container">
+      <section class="metrics">
+        <div class="metrics-grid">
+          <div class="metric-item"><div class="metric-val">5</div><div
+              class="metric-label">Products & Portfolios Owned</div></div>
+          <div class="metric-item"><div class="metric-val">8+</div><div
+              class="metric-label">Years Engineering Depth</div></div>
+          <div class="metric-item"><div class="metric-val">4</div><div
+              class="metric-label">Industry Domains</div></div>
+          <div class="metric-item"><div class="metric-val">4</div><div
+              class="metric-label">Certifications</div></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="container">
+      <section class="experience" id="experience">
+        <div class="section-label"><div class="bar"></div><h2>Work
+            Experience</h2></div>
+
+        <div class="exp-block">
+          <div class="exp-company-header"><h2>European Spallation Source
+              (ESS)</h2></div>
+          <div class="exp-role-line"><span class="exp-title">DevOps de-facto
+              Product
+              Owner | DevOps Engineer</span><span class="exp-period">Nov 2024 –
+              Present</span></div>
+          <div class="exp-cols">
+            <div class="col-header">What I did</div>
+            <div class="col-header">Impact & capability</div>
+            <div class="bullet-left">Owned CI/CD, infrastructure & Kafka
+              data-streaming roadmaps</div>
+            <div class="bullet-right"><strong>Stakeholder Management &
+                Roadmapping</strong>Defined and communicated the infrastructure
+              roadmap with scientific leadership, engineering, and operations,
+              aligning research and IT priorities and translating complex data
+              intensive requirements into a prioritized backlog.</div>
+            <div class="bullet-left">Defined high-availability SLA, disaster
+              recovery strategy, and observability standards for research
+              infrastructure</div>
+            <div class="bullet-right"><strong>Reliability & Incident
+                Leadership</strong> Translated mission critical uptime
+              requirements
+              into SLA commitments and recovery procedures, drove observability
+              adoption as a product initiative across teams, and led on-call
+              incident response for rapid mitigation of research and facility
+              outages.</div></div>
+        </div>
+
+        <div class="exp-block">
+          <div class="exp-company-header"><h2>Motorola Solutions</h2></div>
+          <div class="exp-role-line"><span class="exp-title">Cyber Security
+              Product
+              Owner | Software Engineer</span><span class="exp-period">Jun 2021
+              –
+              May 2024</span></div>
+          <div class="exp-cols">
+            <div class="col-header">What I did</div>
+            <div class="col-header">Impact & capability</div>
+            <div class="bullet-left">Owned cybersecurity roadmap for a cloud
+              based
+              Call Control platform serving a U.S. critical communications
+              customer</div>
+            <div class="bullet-right"><strong>Security Product Leadership &
+                Compliance</strong> Translated security and compliance
+              requirements
+              into a prioritized product roadmap and well defined user stories,
+              driving security capabilities through the continuous delivery
+              pipeline
+              and ensuring FIPS compliant, high availability microservices
+              architecture through collaboration with auditors, legal, and
+              engineering teams to enable entry into government markets.</div>
+            <div class="bullet-left">Owned cybersecurity roadmap of a Linux
+              server
+              infrastructure for critical communications supporting fully
+              virtualized applications</div>
+            <div class="bullet-right"><strong>Security Architecture, Risk
+                mitigation</strong> Defined security requirements, hardening
+              standards, and compliance objectives for the Linux platform,
+              aligning
+              product and engineering teams on security baselines strengthening
+              overall platform resilience
+              in
+              high assurance environments.</div>
+          </div>
+        </div>
+
+        <div class="exp-block">
+          <div class="exp-company-header"><h2>Jabra</h2></div>
+          <div class="exp-role-line"><span class="exp-title">SDK Backend Product
+              Owner</span><span class="exp-period">Oct 2019 – May
+              2021</span></div>
+          <div class="exp-cols">
+            <div class="col-header">What I did</div>
+            <div class="col-header">Impact & capability</div>
+            <div class="bullet-left">Owned SDK backend roadmap within
+              SAFe
+              framework</div>
+            <div class="bullet-right"><strong>Agile Product
+                Ownership</strong>Ran
+              full PO responsibilities within SAFe, managing PI planning,
+              maintained
+              a healthy backlog, and aligned engineering priorities with
+              business
+              objectives across PI cycles.</div>
+          </div>
+        </div>
+
+        <div class="exp-block">
+          <div class="exp-company-header"><h2>SciEngines ApS</h2></div>
+          <div class="exp-role-line"><span class="exp-title">Cryptanalysis
+              Module
+              Product Owner</span><span class="exp-period">Mar 2018 – Oct
+              2019</span></div>
+          <div class="exp-cols">
+            <div class="col-header">What I did</div>
+            <div class="col-header">Impact & capability</div>
+            <div class="bullet-left">Owned 2 different FPGA cryptanalysis
+              modules:<br>Brotli and 7zip</div>
+            <div class="bullet-right"><strong>End-to-end Product
+                Ownership</strong>Held full accountability for scope, timeline,
+              and
+              delivery, from client requirement sessions through to
+              post-delivery
+              support and documentation.</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="container">
+      <section class="skills-section" id="skills">
+        <div class="section-label"><div class="bar"></div><h2>
+            What I Bring</h2></div>
+        <div class="skills-grid">
+          <div class="skill-cat">
+            <h4><i class="ti ti-map" aria-hidden="true"
+                style="margin-right:6px"></i>Strategy & Roadmapping</h4>
+            <div class="skill-tags">
+              <span class="stag">Product Vision</span><span class="stag">Roadmap
+                Definition</span><span class="stag">OKRs & KPIs</span><span
+                class="stag">MVP Scoping</span><span
+                class="stag">Prioritisation</span><span class="stag">Build vs
+                Buy</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <h4><i class="ti ti-repeat" aria-hidden="true"
+                style="margin-right:6px"></i>Agile & Delivery</h4>
+            <div class="skill-tags">
+              <span class="stag">Scrum</span><span class="stag">SAFe</span><span
+                class="stag">PI Planning</span><span class="stag">Backlog
+                Grooming</span><span class="stag">Sprint Reviews</span><span
+                class="stag">Release Planning</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <h4><i class="ti ti-handshake" aria-hidden="true"
+                style="margin-right:6px"></i>Stakeholder Management</h4>
+            <div class="skill-tags">
+              <span class="stag">Requirements Elicitation</span><span
+                class="stag">Executive Communications</span><span
+                class="stag">User
+                Interviews</span><span class="stag">Workshop
+                Facilitation</span><span class="stag">Conflict Resolution</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <h4><i class="ti ti-tools" aria-hidden="true"
+                style="margin-right:6px"></i>Tools & Frameworks</h4>
+            <div class="skill-tags">
+              <span class="stag">Jira</span><span
+                class="stag">Confluence</span><span class="stag">User Story
+                Mapping</span><span class="stag">Impact Mapping</span><span
+                class="stag">Jobs-to-be-Done</span><span class="stag">Lean
+                Product</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CERTIFICATIONS — updated -->
+    <div class="container">
+      <section class="certs-section">
+        <div class="section-label"><div
+            class="bar"></div><h2>Certifications</h2></div>
+        <div class="certs-grid">
+          <div class="cert-card in-progress">
+            <div class="cert-icon-wrap ibm">🎓</div>
+            <div>
+              <div class="cert-name">IBM Product Manager Professional
+                Certificate</div>
+              <div class="cert-meta">IBM / Coursera · In progress</div>
+              <span class="cert-badge progress">⏳ In Progress</span>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon-wrap security">🔐</div>
+            <div>
+              <div class="cert-name">CompTIA Security+ ce</div>
+              <div class="cert-meta">CompTIA · May 2023 – May 2026</div>
+              <span class="cert-badge done">✓ Completed</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-wrap safe">⚡</div>
+            <div>
+              <div class="cert-name">Certified SAFe® 4 Practitioner</div>
+              <div class="cert-meta">Scaled Agile, Inc. · Jan 2020</div>
+              <span class="cert-badge done">✓ Completed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>André Costa · Product Owner · <span>ancosta@gmail.com</span> ·
+        linkedin.com/in/andrelxcosta</p>
+    </footer>
+
+    <script>
+// Scroll-spy: highlight nav link for the section currently in view
+const sections = [
+  { id: 'home',       el: document.getElementById('home') },
+  { id: 'about',      el: document.getElementById('about') },
+  { id: 'experience', el: document.getElementById('experience') },
+  { id: 'skills',     el: document.getElementById('skills') },
+];
+const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+
+function setActive(id) {
+  navLinks.forEach(a => {
+    if (a.dataset.section === id) {
+      a.classList.add('active');
+    } else {
+      a.classList.remove('active');
+    }
+  });
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      setActive(entry.target.id);
+    }
+  });
+}, {
+  rootMargin: '-20% 0px -60% 0px', // trigger when section is ~20% from top
+  threshold: 0
+});
+
+sections.forEach(s => { if (s.el) observer.observe(s.el); });
+
+// Also handle smooth scroll on click
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.getElementById(a.dataset.section);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+  </body>
+</html>
